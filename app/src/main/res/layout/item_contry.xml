@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_country_imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="@dimen/spaceing_24dp"
+        android:layout_marginTop="@dimen/spaceing_16dp"
+        android:layout_marginBottom="@dimen/spaceing_16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/egypt" />
+
+    <TextView
+        android:id="@+id/item_country_nameTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spaceing_8dp"
+        android:layout_marginTop="@dimen/spaceing_16dp"
+        android:layout_marginEnd="@dimen/spaceing_8dp"
+        android:fontFamily="@font/acme"
+        android:gravity="center"
+        android:text="Egypt"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font_32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_country_imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_country_cityTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/acme"
+        android:textSize="@dimen/font_18sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:text="Cairo"
+        app:layout_constraintEnd_toEndOf="@+id/item_country_nameTv"
+        app:layout_constraintStart_toStartOf="@+id/item_country_nameTv"
+        app:layout_constraintTop_toBottomOf="@+id/item_country_nameTv" />
+
+    <TextView
+        android:id="@+id/item_country_numberOfDaysTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="5Days,"
+        android:textColor="@android:color/black"
+        android:gravity="end"
+        android:layout_marginTop="@dimen/spaceing_8dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintEnd_toStartOf="@+id/item_country_priceTV"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/item_country_imageView"
+        app:layout_constraintStart_toStartOf="@+id/item_country_cityTv"
+        app:layout_constraintTop_toBottomOf="@+id/item_country_cityTv" />
+
+    <TextView
+        android:id="@+id/item_country_priceTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="LE2000"
+        android:layout_marginTop="@dimen/spaceing_8dp"
+        android:textColor="@android:color/black"
+        android:gravity="start"
+        android:fontFamily="@font/acme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/item_country_numberOfDaysTV"
+        app:layout_constraintTop_toBottomOf="@+id/item_country_cityTv" />
+
+    <RatingBar
+        android:id="@+id/item_country_ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spaceing_8dp"
+        android:rating="3"
+        android:theme="@style/RatingBar"
+        style="?android:ratingBarStyleSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/item_country_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_country_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/item_country_numberOfDaysTV" />
+</androidx.constraintlayout.widget.ConstraintLayout>
